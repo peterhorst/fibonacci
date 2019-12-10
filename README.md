@@ -12,6 +12,17 @@
  - This project requires the MIDIUtil library: https://pypi.org/project/MIDIUtil/
  - Download fibonacci_song.py
  - call doFib in your favorite console
+ 
+---
+
+## Example
+The following example will create a midi file called "MyFirstFib.mid", containing the first 16 numbers of the Fibonacci sequence, mapped to the C Major diatonic scale.
+```python
+
+from fibonacci_song import doFib, CHROMATIC, DIATONIC
+doFib(0, 1, 16, DIATONIC, 0, True, "MyFirstFib")
+
+```
 
 ---
 
@@ -30,15 +41,3 @@ Parameters for doFib
 - **midi_filename**: if to_midi = True, will create "midi_filename.mid" in current folder.
 
 If you're not sure how to access the resulting MIDI file, I suggest using the free Musescore software (https://musescore.org/en).
-
-
----
-
-## Example
-The following example will create a midi file called "MyFirstFib.mid", containing the first 16 numbers of the Fibonacci sequence, mapped to the C Major diatonic scale.
-```python
-
-from fibonacci_song import doFib, CHROMATIC, DIATONIC
-doFib(0, 1, 16, DIATONIC, 0, True, "MyFirstFib")
-
-```
