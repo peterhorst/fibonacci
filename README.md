@@ -1,3 +1,5 @@
+![Sample Fibonacci Song](FibonacciSample.png)
+
 # fibonacci_song
 > Create a melody based on the Fibonacci sequence
 
