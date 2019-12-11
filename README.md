@@ -49,3 +49,6 @@ If you're not sure how to read/play the resulting MIDI file, I suggest opening i
 I use the name "Fibonacci", but this class can be used to create any sequence of numbers where: 
 number[i] = number[i-2] + number[i-1]. 
 This includes, but is not limited to, the Fibonacci and Lucas sequences.
+
+The mapping from numbers to notes ignores octaves, putting all the notes between C4 and C5.
+For the mathematically minded, it changes the number to base 7 (for diatonic) or base 12 (for chromatic) and then uses just the first digit.
