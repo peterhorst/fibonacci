@@ -54,13 +54,10 @@ class FibSong:
             if self.resulttype == LETTER:
                 mappinglist = chromatic_scale
 
-            diatonic_number = (chromatic_to_diatonic_mapping[(x) % 7] + self.scale) % 12
-            chromatic_number = (x + self.scale) % 12
-
             if self.scaletype == DIATONIC:
-                return mappinglist[diatonic_number]
+                return mappinglist[(chromatic_to_diatonic_mapping[(x) % 7] + self.scale) % 12]
             elif self.scaletype == CHROMATIC:
-                return mappinglist[chromatic_number]
+                return mappinglist[(x + self.scale) % 12]
             else:
                 return "error"
 
