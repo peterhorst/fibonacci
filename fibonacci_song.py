@@ -45,7 +45,7 @@ class FibSong:
         self.midifilename = "fibonaccisong"
         self.tempo = 90
 
-    def mapNumber(self, x):
+    def map_number(self, x):
         if self.resulttype == NUMBER:
             return x
         else:
@@ -61,18 +61,18 @@ class FibSong:
             else:
                 return "error"
 
-    def doFib(self, x, y, count):
+    def do_fib(self, x, y, count):
         result = []
-        result.append(self.mapNumber(x))
-        result.append(self.mapNumber(y))
+        result.append(self.map_number(x))
+        result.append(self.map_number(y))
         for i in range(count-2):
             z = x + y
-            result.append(self.mapNumber(z))
+            result.append(self.map_number(z))
             x = y
             y = z
         return result
 
-    def writeMidi(self, x, y, count):
+    def write_midi(self, x, y, count):
         """
         Creates a midi file based on the fibonacci sequence, using x and y as the starting integers.
 
@@ -84,18 +84,18 @@ class FibSong:
         self.resulttype = MIDI
         MyMIDI = MIDIFile(1)
         MyMIDI.addTempo(track, time, self.tempo)
-        for i, pitch in enumerate(self.doFib(x, y, count)):
+        for i, pitch in enumerate(self.do_fib(x, y, count)):
             MyMIDI.addNote(track, channel, pitch, time + i, duration, volume)
         with open(self.midifilename + ".mid", "wb") as output_file:
             MyMIDI.writeFile(output_file)
         print("Created " + self.midifilename + ".mid in the current folder")
 
-    def printNotes(self, x, y, count):
+    def print_notes(self, x, y, count):
         """Prints the letter names of the notes based on the fibonacci sequence, using x and y as the starting integers."""
         self.resulttype = LETTER
-        print(self.doFib(x, y, count))
+        print(self.do_fib(x, y, count))
 
-    def printNumbers(self, x, y, count):
+    def print_numbers(self, x, y, count):
         """Prints the integers in the fibonacci sequence, using x and y as the starting integers."""
         self.resulttype = NUMBER
-        print(self.doFib(x, y, count))
+        print(self.do_fib(x, y, count))
