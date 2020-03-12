@@ -23,7 +23,7 @@ from fibonacci_song import FibSong, CHROMATIC, DIATONIC
 MySong = FibSong()
 MySong.midifilename = "MyFirstFib"
 MySong.scale = 2  # change the scale to D Major
-MySong.writeMidi(0, 1, 16)
+MySong.write_midi(0, 1, 16)
 
 ```
 
@@ -38,7 +38,7 @@ FibSong has various settings you can change:
 
 Along with the writiMIDI function, you can also call printNotes to print a list of the letter names to the console, or printNumbers to print the integers in the sequence.
 
-writeMIDI, printNotes, and printNumbers all take the same three parameters:
+write_midi, print_notes, and print_numbers all take the same three parameters:
 - **x**: the first integer in the sequence (use 0 for the Fibonacci sequence)
 - **y**: the second integer in the sequence (use 1 for the Fibonacci sequence)
 - **count**: how many notes or numbers to return
