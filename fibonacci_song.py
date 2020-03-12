@@ -24,9 +24,9 @@ chromatic_to_diatonic_mapping = [0, 2, 4, 5, 7, 9, 11] #Convert from chromatic t
 class FibSong:
     """
     Functions:
-        writeMidi: create a midi file with the resulting notes
-        printNotes: print a list of the letter names to the console
-        printNumbers: print a list of the numbers to the console
+        write_midi: create a midi file with the resulting notes
+        print_notes: print a list of the letter names to the console
+        print_numbers: print a list of the numbers to the console
 
     All three functions take the same parameters:
         x: the first integer in the sequence (use 0 for the Fibonacci sequence)
